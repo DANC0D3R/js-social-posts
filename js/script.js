@@ -1,40 +1,40 @@
 const posts = [
     {
         "id": 1,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aspernatur reprehenderit modi quibusdam numquam suscipit vel, repellendus laborum molestias eos.",
         "media": "https://unsplash.it/600/300?image=171",
         "author": {
             "name": "Alessio Vietri",
-            "image": "img/"
+            "image": "img/profile-pic-alessio-vietri.jpg"
         },
         "likes": 80,
         "created": "2021-06-25"
     },
     {
         "id": 2,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque porro temporibus laudantium tenetur amet aut, est incidunt ab ducimus sapiente.",
         "media": "https://unsplash.it/600/400?image=112",
         "author": {
             "name": "Daniele Minieri",
-            "image": "https://unsplash.it/300/300?image=10"
+            "image": "img/profile-pic-daniele-minieri.jpg"
         },
         "likes": 120,
         "created": "2021-09-03"
     },
     {
         "id": 3,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident doloribus voluptatem unde quo itaque vitae eveniet beatae fugiat eius placeat!",
         "media": "https://unsplash.it/600/400?image=234",
         "author": {
             "name": "Flavio Cordari",
-            "image": "https://unsplash.it/300/300?image=20"
+            "image": "img/profile-pic-flavio-cordari.jpg"
         },
         "likes": 78,
         "created": "2021-05-15"
     },
     {
         "id": 4,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam itaque repellat odio nostrum delectus corporis, blanditiis a eveniet sequi laudantium!",
         "media": "https://unsplash.it/600/400?image=24",
         "author": {
             "name": "Luca Formicola",
@@ -45,11 +45,11 @@ const posts = [
     },
     {
         "id": 5,
-        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vel corporis rerum! Delectus quaerat blanditiis a veniam accusamus vitae quo.",
         "media": "https://unsplash.it/600/400?image=534",
         "author": {
             "name": "Mauro Formisano",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "img/profile-pic-mauro-formisano.jpg"
         },
         "likes": 95,
         "created": "2021-03-05"
