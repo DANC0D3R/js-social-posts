@@ -117,7 +117,7 @@ posts.forEach((postData, index) => {
     // Aggiunge nuovo post alla pagina
     postList.append(newPost);
 
-    console.log("Post creato");
+    console.log("Post aggiunto");
 
     // Al click sul bottone mi piace
     const likeButton = document.querySelector(`.post:nth-child(${index + 1}) .js-like-button`);
