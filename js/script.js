@@ -5,7 +5,7 @@ const posts = [
         "media": "https://unsplash.it/600/300?image=171",
         "author": {
             "name": "Alessio Vietri",
-            "image": "https://unsplash.it/300/300?image=15"
+            "image": "img/"
         },
         "likes": 80,
         "created": "2021-06-25"
@@ -121,7 +121,7 @@ posts.forEach((postData, index) => {
 
     // Al click sul bottone mi piace
     const likeButton = document.querySelector(`.post:nth-child(${index + 1}) .js-like-button`);
-    const newLikesCounter = document.querySelector(`.post:nth-child(${index + 1}) .js-likes-counter`);
+    const likesCounter = document.querySelector(`.post:nth-child(${index + 1}) .js-likes-counter`);
 
     likeButton.addEventListener("click", function() {
 
@@ -131,7 +131,7 @@ posts.forEach((postData, index) => {
 
             // Aggiorna il contatore
             postData.likes--;
-            newLikesCounter.innerHTML = postData.likes;
+            likesCounter.innerHTML = postData.likes;
 
             // Rimuove l'ID del post dall'array dei post piaciuti
             const postIndex = likedPosts.indexOf(postData.id);
@@ -142,7 +142,7 @@ posts.forEach((postData, index) => {
 
             // Aggiorna il contatore
             postData.likes++;
-            newLikesCounter.innerHTML = postData.likes;
+            likesCounter.innerHTML = postData.likes;
 
             // Aggiunge l'ID del post all'array dei post piaciuti
             likedPosts.push(postData.id)
