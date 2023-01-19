@@ -119,5 +119,34 @@ posts.forEach((postData, index) => {
 
     console.log("Post creato");
 
-    
+    // Al click sul bottone mi piace
+    const likeButton = document.querySelector(`.post:nth-child(${index + 1}) .js-like-button`);
+    const newLikesCounter = document.querySelector(`.post:nth-child(${index + 1}) .js-likes-counter`);
+
+    likeButton.addEventListener("click", function() {
+
+        // Se il post non e' gia' stato aggiunto ai post piaciuti
+        if (likedPosts.includes(postData.id)) {
+            likeButton.classList.remove("like-button--liked");
+
+            // Aggiorna il contatore
+            postData.likes--;
+            newLikesCounter.innerHTML = postData.likes;
+
+            // Rimuove l'ID del post dall'array dei post piaciuti
+            const postIndex = likedPosts.indexOf(postData.id);
+            likedPosts.splice(postIndex, 1);
+        }
+        else {
+            likeButton.classList.add("like-button--liked");
+
+            // Aggiorna il contatore
+            postData.likes++;
+            newLikesCounter.innerHTML = postData.likes;
+
+            // Aggiunge l'ID del post all'array dei post piaciuti
+            likedPosts.push(postData.id)
+        }
+        console.log("Posts con mipiace:", likedPosts);
+    })
 });
