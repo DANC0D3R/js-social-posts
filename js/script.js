@@ -67,7 +67,7 @@ const postList = document.querySelector(".posts-list");
 // Stampa posts nel feed
 posts.forEach((postData, index) => {
 
-    // Se♂2arazione della struttura di proprieta' "created" degli elementi di "posts"
+    // Separazione della struttura di proprieta' "created" degli elementi di "posts"
     const date =  postData.created.split("-");
 
     const [year, month, day] = date;
