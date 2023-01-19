@@ -4,7 +4,7 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/300?image=171",
         "author": {
-            "name": "Phil Mangione",
+            "name": "Alessio Vietri",
             "image": "https://unsplash.it/300/300?image=15"
         },
         "likes": 80,
@@ -15,7 +15,7 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/400?image=112",
         "author": {
-            "name": "Sofia Perlari",
+            "name": "Daniele Minieri",
             "image": "https://unsplash.it/300/300?image=10"
         },
         "likes": 120,
@@ -26,7 +26,7 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/400?image=234",
         "author": {
-            "name": "Chiara Passaro",
+            "name": "Flavio Cordari",
             "image": "https://unsplash.it/300/300?image=20"
         },
         "likes": 78,
@@ -48,10 +48,76 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/400?image=534",
         "author": {
-            "name": "Alessandro Sainato",
+            "name": "Mauro Formisano",
             "image": "https://unsplash.it/300/300?image=29"
         },
         "likes": 95,
         "created": "2021-03-05"
     }
 ];
+
+// Stampa i dati degli elementi di "posts"
+console.log("Posts", posts);
+
+// Array ID dei post a cui è stato messo mi piace
+let likedPosts = [];
+
+const postList = document.querySelector(".posts-list");
+
+// Stampa posts nel feed
+posts.forEach((postData, index) => {
+
+    // Destructuring  proprieta' "created" degli elementi di "posts"
+    const date =  postData.created.split("-");
+
+    const [year, month, day] = date;
+
+    postData.date = {
+        year: year,
+        month: month,
+        day: day
+    };
+
+    // Crea un nuovo post
+    const newPost = document.createElement ("div");
+    newPost.classList.add("post");
+    
+    newPost.innerHTML = 
+    `
+    <div class="post__header">
+        <div class="post-meta">                    
+            <div class="post-meta__icon">
+                <img class="profile-pic" src="${postData.author.image}" alt="${postData.author.name}">                    
+            </div>
+            <div class="post-meta__data">
+                <div class="post-meta__author">${postData.author.name}</div>
+                <div class="post-meta__time">${postData.date.month}/${postData.date.day}/${postData.date.year}</div>
+            </div>                    
+        </div>
+    </div>
+    <div class="post__text">${postData.content}</div>
+    <div class="post__image">
+        <img src="${postData.media}">
+    </div>
+    <div class="post__footer">
+        <div class="likes js-likes">
+            <div class="likes__cta">
+                <a class="like-button  js-like-button" href="##" data-postid="1">
+                    <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                    <span class="like-button__label">Mi Piace</span>
+                </a>
+            </div>
+            <div class="likes__counter">
+                Piace a <b id="like-counter-1" class="js-likes-counter">${postData.likes}</b> persone
+            </div>
+        </div> 
+    </div>       
+    `;
+    
+    // Aggiunge nuovo post alla pagina
+    postList.append(newPost);
+
+    console.log("Post creato");
+
+    
+});
