@@ -5,7 +5,7 @@ const posts = [
         "media": "https://unsplash.it/600/300?image=171",
         "author": {
             "name": "Alessio Vietri",
-            "image": "img/profile-pic-alessio-vietri.jpg"
+            "image": "https://unsplash.it/300/300?image=15"
         },
         "likes": 80,
         "created": "2021-06-25"
@@ -16,7 +16,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=112",
         "author": {
             "name": "Daniele Minieri",
-            "image": "img/profile-pic-daniele-minieri.jpg"
+            "image": "https://unsplash.it/300/300?image=10"
         },
         "likes": 120,
         "created": "2021-09-03"
@@ -27,7 +27,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=234",
         "author": {
             "name": "Flavio Cordari",
-            "image": "img/profile-pic-flavio-cordari.jpg"
+            "image": "https://unsplash.it/300/300?image=20"
         },
         "likes": 78,
         "created": "2021-05-15"
@@ -49,7 +49,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=534",
         "author": {
             "name": "Mauro Formisano",
-            "image": "img/profile-pic-mauro-formisano.jpg"
+            "image": "https://unsplash.it/300/300?image=29"
         },
         "likes": 95,
         "created": "2021-03-05"
